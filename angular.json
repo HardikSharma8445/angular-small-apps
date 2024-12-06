@@ -1,60 +1,34 @@
-{
-    "version": 1,
-    "projects": {
-      "angular-small-apps": {
-        "projectType": "application",
-        "architect": {
-          "build": {
-            "builder": "@angular-devkit/build-angular:browser",
-            "options": {
-              "outputPath": "dist/angular-small-apps",
-              "index": "src/index.html",
-              "main": "src/main.ts",
-              "polyfills": "src/polyfills.ts",
-              "tsConfig": "tsconfig.app.json",
-              "assets": [
-                "src/favicon.ico",
-                "src/assets"
-              ],
-              "styles": [
-                "src/styles.css"
-              ],
-              "scripts": []
-            },
-            "configurations": {
-              "production": {
-                "fileReplacements": [
-                  {
-                    "replace": "src/environments/environment.ts",
-                    "with": "src/environments/environment.prod.ts"
-                  }
-                ],
-                "optimization": true,
-                "outputHashing": "all",
-                "sourceMap": false,
-                "extractCss": true,
-                "namedChunks": false,
-                "aot": true,
-                "extractLicenses": true,
-                "vendorChunk": false,
-                "buildOptimizer": true
-              }
-            }
-          },
-          "serve": {
-            "builder": "@angular-devkit/build-angular:dev-server",
-            "options": {
-              "browserTarget": "angular-small-apps:build"
-            },
-            "configurations": {
-              "production": {
-                "browserTarget": "angular-small-apps:build:production"
-              }
-            }
-          }
+"build": {
+  "builder": "@angular-devkit/build-angular:browser",
+  "options": {
+    "outputPath": "dist/app-name",
+    "index": "src/index.html",
+    "main": "src/main.ts",
+    "polyfills": "src/polyfills.ts",
+    "tsConfig": "tsconfig.app.json",
+    "assets": [
+      "src/favicon.ico",
+      "src/assets"
+    ],
+    "styles": [
+      "src/styles.css"
+    ],
+    "scripts": []
+  },
+  "configurations": {
+    "production": {
+      "fileReplacements": [
+        {
+          "replace": "src/environments/environment.ts",
+          "with": "src/environments/environment.prod.ts"
         }
-      }
-    },
-    "defaultProject": "angular-small-apps"
+      ],
+      "optimization": true,
+      "outputHashing": "all",
+      "sourceMap": false,
+      "extractLicenses": true,
+      "vendorChunk": false,
+      "buildOptimizer": true
+    }
   }
-  
+}
