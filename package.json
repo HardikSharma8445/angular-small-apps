@@ -17,7 +17,8 @@
   },
   "private": true,
   "scripts": {
-    "release": "standard-version -s"
+    "release": "standard-version -s",
+    "test": "ng test --watch=false"
   },
   "devDependencies": {
     "@commitlint/cli": "^16.2.1",
